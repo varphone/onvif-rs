@@ -1,0 +1,18 @@
+[package]
+name = "onvif-rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hyper = { version = "0.14", features = ["server", "socket2"] }
+socket2 = { version = "0.5" }
+tokio = { version = "1.33", features = [
+    "macros",
+    "net",
+    "rt",
+    "rt-multi-thread",
+    "socket2",
+    "time",
+] }
